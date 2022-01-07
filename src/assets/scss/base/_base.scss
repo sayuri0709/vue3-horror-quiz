@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+//------------------------------------------------------------------------------
+//
+//	共通設定
+//
+//------------------------------------------------------------------------------
+body {
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  user-select: none;
+  touch-action: none;
+  background: #000;
+
+}
+/*#loadContent {
+  opacity: 0;
+  transition: opacity .5s ease;
+  &.load {
+    opacity: 1;
+  }
+}*/
+
+/* Layout
+----------------------------------------*/
+.l-page {
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  position: relative;
+  background: url(assets/images/bg.jpg) top center / cover no-repeat;
+  max-width: 375px;
+  margin: 0 auto;
+  line-height: 1.6;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.l-inner {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.l-header {
+  height: 70px;
+  padding: 28px 0 0;
+  &__logo {
+    width: percentage(437/690)!important;
+  }
+}
+
+/* Component
+----------------------------------------*/
+.c-logo {
+  width: percentage(555/690);
+  margin: 0 auto;
+  line-height: 0;
+}
+.c-lead {
+  p + p {
+    margin-top: 25px;
+  }
+}
+.c-btn {
+  width:  percentage(470/690);
+  margin-left: auto;
+  margin-right: auto;
+  a,
+  > span {
+    display: block;
+    background-color: #870006;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1;
+    padding: 13px 0 18px;
+  }
+  &--gray {
+    a,
+    > span {
+      background-color: #626262;
+      font-size: 1.5rem;
+    }
+  }
+}
+.c-box {
+  background-color: #fff;
+  padding: 20px 15px 30px;
+  border-radius: 4px;
+  color: #000;
+}
+
+/* transition
+----------------------------------------*/
+.router-transition-enter-active {
+  animation: fadeIn .3s;
+  animation-delay: .1s;
+  opacity: 0;
+}
+.router-transition-leave-active {
+  animation: fadeOut .3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
